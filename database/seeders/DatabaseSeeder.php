@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User;
 use App\Models\Listing;
 use Illuminate\Database\Seeder;
 
@@ -13,9 +14,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        \App\Models\User::factory(3)->create();
-        
-        Listing::factory(6)->create();
+        // \App\Models\User::factory(5)->create();
+        $user = User::factory()->create([
+            'name'=> 'don',
+            'email' => 'doncurativo@mycspc.edu.ph'
+        ]);
+        Listing::factory(6)->create([
+            'user_id' => $user->id
+        ]);
 
         //*This are the sample static adding of data in the listing table */
         // Listing::create([

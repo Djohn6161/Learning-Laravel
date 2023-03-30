@@ -1,0 +1,41 @@
+Commands for laravel framework
+
+//delete all the data in the database that will refresh you migration creating new migration
+php artisan migrate:refresh 
+
+//create a new migration table
+php artisan make:migration create_name_table
+
+//create a new migration with the seed of data
+php artisan migrate:refresh --seed
+
+//create a new Model singular name convention
+php artisan make:model Name
+
+//create a factory seeder for certain table migration
+php artisan make:factory NameFactory
+
+//create controller
+php artisan make:controller NameController
+
+//to edit your file or more specifically for pagination editing
+php artisan vendor:publish
+
+//add the clockwork extension
+composer require itsgoingd/clockwork
+
+//Edit where your file that you uploded go
+config->filesystems.php
+'disks' => [
+
+        'local' => [
+            'driver' => 'local',
+            'root' => storage_path('app'),
+            'throw' => false,
+        ],
+
+//create a same link to storage folder to access the files that are uploaded
+php artisan storage:link
+
+//tinker command will give you access to database
+php artisan tinker

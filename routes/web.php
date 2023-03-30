@@ -22,9 +22,9 @@ Route::get('/', function () {
     ]);
 });
 // Single Listing
-Route::get('/listing/{id}', function($id){
+Route::get('/listing/{id}', function(Listing $listing){
     return view('listing', [
-        'listing' => Listing::find($id)
+        'listing' => $listing
     ]);
 });
 

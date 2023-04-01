@@ -39,3 +39,19 @@ php artisan storage:link
 
 //tinker command will give you access to database
 php artisan tinker
+
+/*
+    Common Resource Routes:
+    index - Show all listings
+    show - show single listing
+    create - show form to create new listing
+    store - Store new listing
+    edit - Show form to edit listing
+    update - Update listing
+    destroy - Delete listing
+
+*/
+
+if category is equals to category equals active
+
+protected $fillable = ['column_name', 'column_name', 'column_name', 'column_name'];
